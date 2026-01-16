@@ -1,15 +1,11 @@
-## Coursera - Microsoft Full-Stack Developer
+# Coursera - Microsoft Full-Stack Developer
 
 ## Blazor for Front-End Development
 
-Great! Now that your code is live, a professional README.md will make your project stand out and ensure you meet all the assignment criteria.
-
-You can copy and paste the following content into a new file named README.md in your project root, or edit it directly on GitHub:
-
-EventEase - Blazor Event Management App
+### EventEase - Blazor Event Management App
 EventEase is a modern web application built with Blazor (.NET 9) and Bootstrap. This project was developed as part of a technical assignment to demonstrate core Blazor capabilities, including component-based architecture, two-way data binding, form validation, and interactive state management.
 
-# Features
+### Features
 Event Dashboard: Displays event details using a custom EventCard component.
 
 Real-time Data Binding: Implements two-way data binding allowing instant updates of event information.
@@ -20,7 +16,7 @@ Attendance Tracker: An interactive management tool to track and update guest att
 
 Responsive Design: Fully mobile-friendly UI built with Bootstrap.
 
-# Copilot Assistance Summary
+### Copilot Assistance Summary
 Microsoft Copilot served as an essential pair programmer throughout the development process:
 
 Foundational Setup: It assisted in scaffolding the EventCard component and setting up the initial two-way data binding logic.
@@ -31,7 +27,7 @@ Optimization: It provided the logic for the RegistrationModel validation and sug
 
 State Management: Copilot helped design the logic for the Attendance Tracker to ensure the UI reflects data changes immediately.
 
-#  Technical Stack
+###  Technical Stack
 Framework: .NET 9 (Blazor Web App)
 
 Interactivity Mode: Interactive Server
@@ -40,7 +36,7 @@ Styling: Bootstrap 5
 
 Language: C# / Razor
 
-### 📦 How to Run Locally
+###  How to Run Locally
 
 1. Clone the repository:
 ```bash
