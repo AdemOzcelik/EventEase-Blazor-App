@@ -1,0 +1,31 @@
+@page "/attendance"
+
+<h3>Attendance Tracker</h3>
+
+<ul class="list-group mb-3">
+    @foreach (var guest in guests)
+    {
+        <li class="list-group-item d-flex justify-content-between">
+            @guest.Name
+            <button class="btn btn-sm @(guest.IsPresent ? "btn-success" : "btn-secondary")" 
+                    @onclick="() => ToggleAttendance(guest)">
+                @(guest.IsPresent ? "Present" : "Mark Absent")
+            </button>
+        </li>
+    }
+</ul>
+
+<p>Total Present: @guests.Count(g => g.IsPresent)</p>
+
+@code {
+    private List<Guest> guests = new()
+    {
+        new Guest { Name = "Alice" },
+        new Guest { Name = "Bob" },
+        new Guest { Name = "Charlie" }
+    };
+
+    private void ToggleAttendance(Guest guest) => guest.IsPresent = !guest.IsPresent;
+
+    public class Guest { public string Name { get; set; } public bool IsPresent { get; set; } }
+}

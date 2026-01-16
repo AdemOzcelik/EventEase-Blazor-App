@@ -1,0 +1,39 @@
+@page "/register"
+@using System.ComponentModel.DataAnnotations
+
+<h3>Register for Event</h3>
+
+<EditForm Model="@registrationModel" OnValidSubmit="HandleValidSubmit" FormName="EventRegistrationForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>User Name:</label>
+        <InputText class="form-control" @bind-Value="registrationModel.UserName" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email:</label>
+        <InputText class="form-control" @bind-Value="registrationModel.Email" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</EditForm>
+
+@if (isRegistered)
+{
+    <div class="alert alert-success mt-3">Registration successful!</div>
+}
+
+@code {
+    private RegistrationModel registrationModel = new();
+    private bool isRegistered = false;
+
+    private void HandleValidSubmit() => isRegistered = true;
+
+    public class RegistrationModel
+    {
+        [Required] public string UserName { get; set; }
+        [Required, EmailAddress] public string Email { get; set; }
+    }
+}
