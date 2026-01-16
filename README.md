@@ -1,4 +1,3 @@
+## Coursera - Microsoft Full-Stack Developer
 
-Coursera - Microsoft Full-Stack Developer
-
-Blazor for Front-End Development
+## Blazor for Front-End Development
